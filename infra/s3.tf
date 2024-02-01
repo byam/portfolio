@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "portfolio" {
 }
 
 resource "aws_s3_bucket" "www-portfolio" {
-  bucket = "www.${var.domain_name}"
+  bucket = var.domain_name_www
 }
 
 ###############################
