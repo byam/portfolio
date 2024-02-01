@@ -74,6 +74,6 @@ resource "aws_s3_bucket_website_configuration" "portfolio" {
   bucket = aws_s3_bucket.portfolio.id
   redirect_all_requests_to {
     host_name = var.domain_name_www
-    protocol  = "http"
+    protocol  = "https"
   }
 }

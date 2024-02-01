@@ -8,8 +8,8 @@ resource "aws_route53_record" "www-portfolio" {
   name    = var.domain_name_www
   type    = "A"
   alias {
-    name                   = "s3-website-us-east-1.amazonaws.com"
-    zone_id                = "Z3AQBSTGFYJSTF"
+    name                   = aws_cloudfront_distribution.www-portfolio.domain_name
+    zone_id                = aws_cloudfront_distribution.www-portfolio.hosted_zone_id
     evaluate_target_health = false
   }
 }
@@ -20,8 +20,8 @@ resource "aws_route53_record" "portfolio" {
   name    = var.domain_name
   type    = "A"
   alias {
-    name                   = "s3-website-us-east-1.amazonaws.com"
-    zone_id                = "Z3AQBSTGFYJSTF"
+    name                   = aws_cloudfront_distribution.portfolio.domain_name
+    zone_id                = aws_cloudfront_distribution.portfolio.hosted_zone_id
     evaluate_target_health = false
   }
 }
