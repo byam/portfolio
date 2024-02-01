@@ -9,7 +9,7 @@
 
 : Deploy frontend && {
     readonly AWS_PROFILE="cc"
-    readonly BUCKET_NAME="www.bya.github.io"
+    readonly BUCKET_NAME="www.byambasuren.com"
 
     npm run build
     aws s3 sync build/ s3://${BUCKET_NAME} --profile ${AWS_PROFILE}

@@ -3,11 +3,11 @@
 ###############################
 
 resource "aws_s3_bucket" "portfolio" {
-  bucket = "bya.github.io"
+  bucket = var.domain_name
 }
 
 resource "aws_s3_bucket" "www-portfolio" {
-  bucket = "www.bya.github.io"
+  bucket = "www.${var.domain_name}"
 }
 
 ###############################
@@ -53,4 +53,27 @@ resource "aws_s3_bucket_policy" "www-portfolio" {
       },
     ],
   })
+}
+
+###############################
+# Enable static website hosting
+###############################
+
+resource "aws_s3_bucket_website_configuration" "www-portfolio" {
+  bucket = aws_s3_bucket.www-portfolio.id
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "error.html"
+  }
+}
+
+resource "aws_s3_bucket_website_configuration" "portfolio" {
+  bucket = aws_s3_bucket.portfolio.id
+  redirect_all_requests_to {
+    host_name = var.domain_name_www
+    protocol  = "http"
+  }
 }
