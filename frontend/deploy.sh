@@ -11,6 +11,6 @@
     readonly AWS_PROFILE="cc"
     readonly BUCKET_NAME="byambasuren.com"
 
-    npm run build
-    aws s3 sync output/ s3://${BUCKET_NAME} --profile ${AWS_PROFILE}
+    yarn build
+    aws s3 sync out s3://${BUCKET_NAME} --profile ${AWS_PROFILE}
 }

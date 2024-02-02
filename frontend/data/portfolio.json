@@ -1,0 +1,65 @@
+{
+    "name": "Bya",
+    "headerTaglineOne": "Hello 👋",
+    "headerTaglineTwo": "I'm Byambasuren Ganbaatar",
+    "headerTaglineThree": "Software Engineer",
+    "headerTaglineFour": " based in Seattle, WA.",
+    "showCursor": false,
+    "showBlog": true,
+    "darkMode": true,
+    "showResume": false,
+    "socials": [
+        {
+            "id": "1",
+            "title": "Github",
+            "link": "https://github.com/byam"
+        },
+        {
+            "id": "2",
+            "title": "LinkedIn",
+            "link": "https://www.linkedin.com/in/byambasureng/"
+        },
+        {
+            "id": "3",
+            "title": "Twitter",
+            "link": "https://twitter.com/byambaa_swiss"
+        },
+        {
+            "id": "4",
+            "title": "Blog",
+            "link": "https://www.byambasuren.com/blog"
+        },
+        { "id": "5", "title": "Email", "link": "mailto:bya.mng@gmail.com" }
+    ],
+    "projects": [],
+    "services": [],
+    "aboutpara": "Software engineer with approximately 6 years of experience playing a key role in the development, maintenance, and deployment of complex enterprise software in high-performance and secure environments. Hands-on expertise in Big Data platforms and programming; back-end development and data engineering. Personable team player with experience collaborating with diverse cross-functional teams to deliver outstanding results.",
+    "resume": {
+        "tagline": "👋  I'm a software engineer, big data engineer.",
+        "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+        "experiences": [
+            {
+                "id": "1",
+                "dates": "March 2022 - Present",
+                "type": "Full Time",
+                "position": "Frontend Engineer at X",
+                "bullets": "Bullet One, Bullet Two"
+            },
+            {
+                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+                "dates": "July 2020 - March 2022",
+                "type": "Full Time",
+                "position": "Frontend Engineer at X",
+                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+            }
+        ],
+        "education": {
+            "universityName": "University X",
+            "universityDate": "2016-2020",
+            "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        },
+        "languages": ["Javascript", "HTML5", "CSS", "Python", "Go"],
+        "frameworks": ["React", "Typescript", "NodeJs"],
+        "others": ["Figma", "AdobeXD", "AWS"]
+    }
+}

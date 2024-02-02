@@ -28,8 +28,8 @@ resource "aws_cloudfront_distribution" "portfolio" {
     viewer_protocol_policy = "redirect-to-https"
     # Set custom TTL values
     min_ttl     = 0
-    default_ttl = 3600  # 1 hour
-    max_ttl     = 86400 # 24 hours
+    default_ttl = 60  # 1 minute
+    max_ttl     = 600 # 10 minutes
     forwarded_values {
       query_string = false
 
