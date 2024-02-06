@@ -21,7 +21,8 @@ const ContactForm = ({ onClose }) => {
         setSubmitting(true);
 
         // Placeholder for API URL
-        const apiUrl = "YOUR_API_ENDPOINT";
+        const apiUrl =
+            "https://hj9rnqq8m6.execute-api.us-east-1.amazonaws.com/prod/contact-form";
         try {
             const response = await fetch(apiUrl, {
                 method: "POST",
@@ -31,7 +32,7 @@ const ContactForm = ({ onClose }) => {
                 body: JSON.stringify(formData),
             });
             // TODO: Handle response
-            if (!response.ok) {
+            if (response.ok) {
                 setMessage("Message sent successfully!");
                 setFormData({
                     messageTitle: "",
