@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.4.5"
+  required_version = ">= 1.7.2"
 
   backend "s3" {
     bucket = "byam-portfolio-tfstate"
