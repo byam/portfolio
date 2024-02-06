@@ -18,7 +18,17 @@ variable "domain_name" {
   default = "byambasuren.com"
 }
 
+variable "api_domain_name" {
+  type    = string
+  default = "api.byambasuren.com"
+}
+
 variable "domain_name_www" {
   type    = string
   default = "www.byambasuren.com"
+}
+
+variable "email_address" {
+  description = "Email address to receive notifications"
+  default     = "bya.mng@gmail.com"
 }

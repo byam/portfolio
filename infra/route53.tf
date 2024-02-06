@@ -25,3 +25,15 @@ resource "aws_route53_record" "www_portfolio" {
     evaluate_target_health = false
   }
 }
+
+resource "aws_route53_zone" "api_custom_domain" {
+  name = var.api_domain_name
+}
+
+# resource "aws_route53_record" "api_gateway" {
+#   zone_id = aws_route53_zone.api_custom_domain.zone_id
+#   name    = var.api_domain_name
+#   type    = "CNAME"
+#   records = [aws_api_gateway_domain_name.api_custom_domain.regional_domain_name]
+#   ttl     = 300
+# }

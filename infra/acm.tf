@@ -3,7 +3,7 @@
 # #######################################
 resource "aws_acm_certificate" "cert_portfolio" {
   domain_name               = var.domain_name
-  subject_alternative_names = [var.domain_name_www]
+  subject_alternative_names = [var.domain_name_www, var.api_domain_name]
   validation_method         = "DNS"
 
   lifecycle {
