@@ -111,6 +111,19 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                                     >
                                         Contact me
                                     </Button>
+
+                                    <Modal
+                                        isOpen={isContactModalOpen}
+                                        onClose={() =>
+                                            setIsContactModalOpen(false)
+                                        }
+                                    >
+                                        <ContactForm
+                                            onClose={() =>
+                                                setIsContactModalOpen(false)
+                                            }
+                                        />
+                                    </Modal>
                                 </div>
                             ) : (
                                 <div className="grid grid-cols-1">
@@ -140,13 +153,24 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
                                     <Button
                                         onClick={() =>
-                                            window.open(
-                                                "mailto:hello@chetanverma.com"
-                                            )
+                                            setIsContactModalOpen(true)
                                         }
                                     >
-                                        Contactss
+                                        Contact me
                                     </Button>
+
+                                    <Modal
+                                        isOpen={isContactModalOpen}
+                                        onClose={() =>
+                                            setIsContactModalOpen(false)
+                                        }
+                                    >
+                                        <ContactForm
+                                            onClose={() =>
+                                                setIsContactModalOpen(false)
+                                            }
+                                        />
+                                    </Modal>
                                 </div>
                             )}
                         </Popover.Panel>
@@ -231,13 +255,18 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                             </Button>
                         )}
 
-                        <Button
-                            onClick={() =>
-                                window.open("mailto:hello@chetanverma.com")
-                            }
-                        >
-                            Contacts
+                        <Button onClick={() => setIsContactModalOpen(true)}>
+                            Contact me
                         </Button>
+
+                        <Modal
+                            isOpen={isContactModalOpen}
+                            onClose={() => setIsContactModalOpen(false)}
+                        >
+                            <ContactForm
+                                onClose={() => setIsContactModalOpen(false)}
+                            />
+                        </Modal>
 
                         {mounted && theme && data.darkMode && (
                             <Button
