@@ -6,7 +6,7 @@
     - [Frontend](#frontend)
     - [Infra (Terraform)](#infra-terraform)
 
-<https://www.byambasuren.com/>
+<https://byambasuren.com/>
 
 ## Local development
 

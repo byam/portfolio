@@ -24,11 +24,6 @@
             "title": "Twitter",
             "link": "https://twitter.com/byambaa_swiss"
         },
-        {
-            "id": "4",
-            "title": "Blog",
-            "link": "https://www.byambasuren.com/blog"
-        },
         { "id": "5", "title": "Email", "link": "mailto:bya.mng@gmail.com" }
     ],
     "projects": [],
