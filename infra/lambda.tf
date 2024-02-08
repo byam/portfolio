@@ -14,6 +14,10 @@ resource "aws_lambda_function" "contact_form_handler" {
   }
 
   role = aws_iam_role.lambda_exec_role.arn
+
+  lifecycle {
+    ignore_changes = ["source_code_hash"]
+  }
 }
 
 resource "aws_iam_role" "lambda_exec_role" {
